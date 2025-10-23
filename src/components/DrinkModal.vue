@@ -42,7 +42,7 @@ defineProps({
 
 defineEmits(['close'])
 
-const hoverCursorUrl = `url(${hoverCursorIcon}), auto`
+const hoverCursorUrl = `url(${HoverCursor}), auto`
 
 // Prevents background scroll when modal is open on mobile and tablet
 onMounted(() => {
