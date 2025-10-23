@@ -1,20 +1,59 @@
-# 24G-Frontend-Test-Project
-Drink Menu Final Project for last stage of interview.
+# REQUIRED RESPONSES
+Name: Matthew Sporman
 
-## Project Setup
+Date: October 23rd, 2025
 
-```sh
-npm install
-```
+Hours spent: 5 hours
 
-### Compile and Hot-Reload for Development
+Hyper-link: https://drink-menu-24g.onrender.com
 
-```sh
-npm run dev
-```
+The above is hosted on render. Similar tool to Kubernetes but much simpler and better for this use-case as a result.
 
-### Compile and Minify for Production
+# OPTIONAL RESPONSES
+Problem 1:
 
-```sh
-npm run build
-```
+<img :src="hovered ? drink.images.back : drink.images.front" />
+
+The above is a line of code I had in my DrinkInfoCard.vue file.
+
+Vue evaluates drink.images.back immediately when rendering the component...
+If drink.images is undefined -> for example, the fetch hasn’t completed yet or the JSON hasn’t loaded, it
+throws a runtime error.
+
+I learned that I need to instead do this:
+:src="hovered ? drink.images?.back : drink.images?.front"
+
+This allows JS to not just immediately error out i.e. the ?. operator tells JavaScript: 
+“If drink.images is undefined or null, don’t throw an error; just return undefined.”
+
+So instead of crashing, the img tag’s src becomes undefined.
+
+This is something I got stuck on for a hot minute (20 minutes) and was the source of why nothing was appearing
+beneath my welcome message. Vue is a relatively new thing for me, but I wanted to make use of it now, as you 
+mentioned it being your primary framework, so no better time than the present to get familiarized with it. I have
+only used it once before, but it was a very small scale media player I was just fooling around with.
+
+Problem 2:
+I ran into an issue when trying to use Google’s Material You close icon for the drink info cards.
+To ensure the icon loads correctly after deployment (for example, when hosting on Render),
+ you need to dynamically import the SVG like this:
+
+<script setup>
+    import CloseIcon from '@/assets/close.svg'
+</script>
+
+<button class="close" @click="$emit('close')">
+    <img :src="CloseIcon" alt="Close" width="24" height="24" />
+</button>
+
+The above approach is necessary since Vite needs to correctly process the asset path during the build,
+so the icon’s file path resolves properly in the hosted environment.
+
+Final Thoughts:
+Vue.js is really cool and I am glad that I picked this up now it is a good framework and actually is much easier than
+using just straight vanilla JavaScript. I didn't realize how nice a framework could be.
+
+Another huge thing I got from this, is I now fully understand what Vite is and how amazing it is
+that you can npm run dev and dynamically see changes. This is so incredibly useful and way better then
+the vanilla set-up I was using before. I don't think I will really go back to vanilla JS methods of coding after
+using Vue. I want to try others going forwards, but better stick to Vue for now and learn one thing at a time!
