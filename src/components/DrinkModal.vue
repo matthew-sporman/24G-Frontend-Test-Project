@@ -2,9 +2,8 @@
   <div class="overlay" @click.self="$emit('close')">
     <div class="modal">
       <!-- Close button -->
-      <button class="close" @click="$emit('close')"
-  >
-  <img :src="CloseIcon" alt="Close" width="24" height="24" />
+      <button class="close" @click="$emit('close')">
+        <img :src="CloseIcon" alt="Close" width="24" height="24" />
       </button>
 
       <h2 class = "drink-title">{{ drink.name }}</h2>
@@ -14,11 +13,13 @@
       <p class = "drink-p-text" v-if="drink.mocktail"><strong>Mocktail:</strong> {{ drink.mocktail }}</p>
 
       <h3 class="drink-subtitle">Ingredients</h3>
+      
       <ul>
         <li v-for="(item, index) in drink.ingredients" :key="index">{{ item }}</li>
       </ul>
 
       <h3 class = "drink-subtitle">Steps</h3>
+      
       <ul>
         <li v-for="(step, index) in drink.steps" :key="index">{{ step }}</li>
       </ul>

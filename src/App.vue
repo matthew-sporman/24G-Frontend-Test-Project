@@ -10,12 +10,12 @@ const selectedDrink = ref(null)
 // Load drinks from JSON
 onMounted(async () => {
     try {
-    const res = await fetch('https://assets.24g.com/public/2022-frontend-test-project/drinks.json')
-    const data = await res.json()
-    drinks.value = data.drinks || []
-    console.log('Loaded drinks:', drinks.value)
-  } catch (err) {
-    console.error('Failed to load drinks:', err)
+        const res = await fetch('https://assets.24g.com/public/2022-frontend-test-project/drinks.json')
+        const data = await res.json()
+        drinks.value = data.drinks || []
+        console.log('Loaded drinks:', drinks.value)
+    } catch (err) {
+      console.error('Failed to load drinks:', err)
   }
 
   // Sets default cursor
