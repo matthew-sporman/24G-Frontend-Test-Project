@@ -31,7 +31,9 @@
 </template>
 
 <script setup>
+import { onMounted, onUnmounted } from 'vue'
 import CloseIcon from '@/assets/close.svg'
+
 defineProps({
   drink: {
     type: Object,
@@ -40,6 +42,14 @@ defineProps({
 })
 
 defineEmits(['close'])
+
+// Prevent background scroll when modal is open on mobile and tablet
+onMounted(() => {
+  document.body.style.overflow = 'hidden'
+})
+onUnmounted(() => {
+  document.body.style.overflow = ''
+})
 </script>
 
 <style scoped>
@@ -147,7 +157,7 @@ ul {
 
 @media (max-width: 767px) {
   .overlay {
-    align-items: flex-start; /* allows modal to scroll naturally */
+    align-items: flex-start;
     padding: 1rem 0.5rem;
   }
 
