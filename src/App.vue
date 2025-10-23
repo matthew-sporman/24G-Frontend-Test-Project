@@ -71,7 +71,7 @@ function closeModal() {
   background-repeat: no-repeat;
   text-align: center;
   padding: 2rem;
-  cursor: url(public/arrowhead-rounded-outline.svg) 12 12, auto;
+  cursor: url(./arrowhead-rounded-outline.svg) 12 12, auto;
 }
 
 .the-24G-logo {

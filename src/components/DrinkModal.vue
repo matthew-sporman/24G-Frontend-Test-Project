@@ -4,7 +4,7 @@
     <div class="modal">
       <!-- Close button -->
       <button class="close" @click="$emit('close')">
-        <img src="/close.svg" alt="Close" width="24" height="24" />
+        <img src="./close.svg" alt="Close" width="24" height="24" />
       </button>
 
       <!-- Drink name -->
@@ -77,13 +77,13 @@ defineEmits(['close'])
   font-size: 1.2rem;
   cursor: pointer;
   margin: 20px;
-  cursor: url(public/hover.svg) 12 12, auto;
+  cursor: url(./hover.svg) 12 12, auto;
 }
 
 .close img {
   /* makes the close icon white */
   filter: invert(100%);
-  cursor: url(public/hover.svg) 12 12, auto;
+  cursor: url(./hover.svg) 12 12, auto;
 }
 
 .drink-title {
