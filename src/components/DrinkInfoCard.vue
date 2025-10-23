@@ -19,6 +19,7 @@
 
 <script setup>
 import { ref } from 'vue'
+import HoverCursor from '@/assets/hover.png'
 
 defineProps({
   drink: { type: Object, required: true }
@@ -27,6 +28,8 @@ defineProps({
 defineEmits(['open'])
 
 const hovered = ref(false)
+
+const hoverCursorUrl = `url(${HoverCursor}), auto`
 </script>
 
 <style scoped>
@@ -42,7 +45,7 @@ const hovered = ref(false)
 
 .drink-card:hover {
   transform: scale(1.05);
-  cursor: url('@/public/hover.png'), auto;
+  cursor: v-bind(hoverCursorUrl);
 }
 
 .card-image {
