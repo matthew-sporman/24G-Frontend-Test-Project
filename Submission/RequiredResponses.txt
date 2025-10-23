@@ -4,4 +4,6 @@ Date: October 23rd, 2025
 
 Hours spent: 5 hours
 
-Hyper-link: https://two4g-drink-menu.onrender.com
+Hyper-link: https://drink-menu-24g.onrender.com
+
+The above is hosted on render. Similar tool to Kubernetes but much simpler and better for this use-case as a result.
