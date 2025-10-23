@@ -3,25 +3,22 @@
   <div class="overlay" @click.self="$emit('close')">
     <div class="modal">
       <!-- Close button -->
-      <button class="close" @click="$emit('close')">
+      <button class="close" @click="$emit('close')"
+  >
   <img :src="CloseIcon" alt="Close" width="24" height="24" />
       </button>
 
-      <!-- Drink name -->
       <h2 class = "drink-title">{{ drink.name }}</h2>
-      <!-- Glassware (optional) -->
+
       <p class = "drink-p-text" v-if="drink.glassware"><strong>Glassware:</strong> {{ drink.glassware }}</p>
 
-      <!-- Mocktail instructions -->
       <p class = "drink-p-text" v-if="drink.mocktail"><strong>Mocktail:</strong> {{ drink.mocktail }}</p>
 
-      <!-- Ingredients -->
       <h3 class="drink-subtitle">Ingredients</h3>
       <ul>
         <li v-for="(item, index) in drink.ingredients" :key="index">{{ item }}</li>
       </ul>
 
-      <!-- Steps -->
       <h3 class = "drink-subtitle">Steps</h3>
       <ul>
         <li v-for="(step, index) in drink.steps" :key="index">{{ step }}</li>
@@ -43,12 +40,14 @@ defineProps({
 
 defineEmits(['close'])
 
-// Prevent background scroll when modal is open on mobile and tablet
+// Prevents background scroll when modal is open on mobile and tablet
 onMounted(() => {
   document.body.style.overflow = 'hidden'
 })
+
 onUnmounted(() => {
   document.body.style.overflow = ''
+  document.body.style.cursor = `url(${ArrowCursor}), auto`
 })
 </script>
 

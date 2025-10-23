@@ -1,8 +1,6 @@
 <template>
   <div
     class="drink-card"
-    @mouseenter="hovered = true"
-    @mouseleave="hovered = false"
     @click="$emit('open', drink)"
   >
     <!-- Image flips on hover -->
@@ -20,13 +18,11 @@
 <script setup>
 import { ref } from 'vue'
 
-
 defineProps({
   drink: { type: Object, required: true }
 })
-defineEmits(['open'])
 
-const hovered = ref(false)
+defineEmits(['open'])
 </script>
 
 <style scoped>

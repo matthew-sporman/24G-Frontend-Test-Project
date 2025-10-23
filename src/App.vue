@@ -1,7 +1,8 @@
 <script setup>
-import { ref, onMounted, onBeforeUnmount } from 'vue'
+import { ref, onMounted } from 'vue'
 import DrinkInfoCard from './components/DrinkInfoCard.vue'
 import DrinkModal from './components/DrinkModal.vue'
+import ArrowCursor from '@/assets/arrowhead-rounded-outline.png'
 
 const drinks = ref([])
 const selectedDrink = ref(null)
@@ -16,14 +17,32 @@ onMounted(async () => {
   } catch (err) {
     console.error('Failed to load drinks:', err)
   }
+
+  // Set default cursor
+  document.body.style.cursor = `url(${ArrowCursor}), auto`
+  
+// Dynamic Typing Animation of Title
+    const paragraphText = "Explore our curated selection of drinks!";
+    const paraEl = document.getElementById('home_intro');
+
+    let i = 0;
+
+    function typeParagraph() {
+        if (i < paragraphText.length) {
+            paraEl.textContent += paragraphText.charAt(i);
+            i++;
+            setTimeout(typeParagraph, 50);
+        }
+    }
+
+    // Start the typing animation
+    typeParagraph();
 })
 
-// Open modal with clicked drink
 function openModal(drink) {
   selectedDrink.value = drink
 }
 
-// Close modal
 function closeModal() {
   selectedDrink.value = null
 }
@@ -37,21 +56,19 @@ function closeModal() {
         class="the-24G-logo"
       />
     </header>
-    <h2 class="welcome-message">Welcome! Drinks below are the Team's favorites! Select one to learn more!</h2>
+    <h2 class="welcome-message" id= home_intro></h2>
 
-    <!-- Main content slot -->
     <main>
       <div class="cards">
-        <!-- Render the drink cards -->
+
         <DrinkInfoCard
           v-for="drink in drinks"
           :key="drink.id"
           :drink="drink"
-    @open="openModal"
+          @open="openModal"
         />
       </div>
 
-      <!-- Modal -->
       <DrinkModal
         v-if="selectedDrink"
         :drink="selectedDrink"
