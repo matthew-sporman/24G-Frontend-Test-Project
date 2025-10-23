@@ -1,4 +1,5 @@
 # 24G-Frontend-Test-Project
+Drink Menu Final Project for last stage of interview.
 
 ## Project Setup
 
