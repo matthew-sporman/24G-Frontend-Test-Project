@@ -87,11 +87,11 @@ onUnmounted(() => {
   background: transparent;
   font-size: 1.2rem;
   margin: 20px;
-  cursor: url('@/assets/hover.png'), auto;
+  cursor: url('@/hover.png'), auto;
 }
 
 .close:hover {
-  cursor: url('@/assets/hover.png'), auto;
+  cursor: url('@/hover.png'), auto;
 }
 
 .close img {

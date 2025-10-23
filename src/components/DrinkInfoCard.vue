@@ -42,7 +42,7 @@ const hovered = ref(false)
 
 .drink-card:hover {
   transform: scale(1.05);
-  cursor: url('@/assets/hover.png'), auto;
+  cursor: url('@/hover.png'), auto;
 }
 
 .card-image {
