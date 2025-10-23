@@ -31,6 +31,7 @@
 import { onMounted, onUnmounted } from 'vue'
 import CloseIcon from '@/assets/close.svg'
 import ArrowCursor from '@/assets/arrowhead-rounded-outline.png'
+import HoverCursor from '@/assets/hover.png'
 
 defineProps({
   drink: {
@@ -40,6 +41,8 @@ defineProps({
 })
 
 defineEmits(['close'])
+
+const hoverCursorUrl = `url(${hoverCursorIcon}), auto`
 
 // Prevents background scroll when modal is open on mobile and tablet
 onMounted(() => {
@@ -87,11 +90,7 @@ onUnmounted(() => {
   background: transparent;
   font-size: 1.2rem;
   margin: 20px;
-  cursor: url('@/public/hover.png'), auto;
-}
-
-.close:hover {
-  cursor: url('@/public/hover.png'), auto;
+  cursor: v-bind(hoverCursorUrl);
 }
 
 .close img {
