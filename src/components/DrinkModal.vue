@@ -30,6 +30,7 @@
 <script setup>
 import { onMounted, onUnmounted } from 'vue'
 import CloseIcon from '@/assets/close.svg'
+import ArrowCursor from '@/assets/arrowhead-rounded-outline.png'
 
 defineProps({
   drink: {
@@ -85,8 +86,12 @@ onUnmounted(() => {
   border: none;
   background: transparent;
   font-size: 1.2rem;
-  cursor: pointer;
   margin: 20px;
+  cursor: url('@/assets/hover.png'), auto;
+}
+
+.close:hover {
+  cursor: url('@/assets/hover.png'), auto;
 }
 
 .close img {

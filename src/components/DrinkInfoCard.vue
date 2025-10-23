@@ -2,6 +2,8 @@
   <div
     class="drink-card"
     @click="$emit('open', drink)"
+    @mouseenter="hovered = true"
+    @mouseleave="hovered = false"
   >
     <!-- Image flips on hover -->
     <img
@@ -23,12 +25,13 @@ defineProps({
 })
 
 defineEmits(['open'])
+
+const hovered = ref(false)
 </script>
 
 <style scoped>
 .drink-card {
   width: 200px;
-  cursor: pointer;
   text-align: center;
   transition: transform 0.2s ease;
   border: 2px solid #353E43;
@@ -39,6 +42,7 @@ defineEmits(['open'])
 
 .drink-card:hover {
   transform: scale(1.05);
+  cursor: url('@/assets/hover.png'), auto;
 }
 
 .card-image {
