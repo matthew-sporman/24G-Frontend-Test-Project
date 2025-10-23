@@ -5,14 +5,13 @@
     @mouseenter="hovered = true"
     @mouseleave="hovered = false"
   >
-    <!-- Image flips on hover -->
+    <!-- Image flips on hover (requirement!) -->
     <img
     :src="hovered ? drink.images?.back : drink.images?.front"
     :alt="drink.name"
     class="card-image"
 />
     
-    <!-- Drink name -->
     <h3 class="drink-name">{{ drink.name }}</h3>
   </div>
 </template>

@@ -18,10 +18,10 @@ onMounted(async () => {
     console.error('Failed to load drinks:', err)
   }
 
-  // Set default cursor
+  // Sets default cursor
   document.body.style.cursor = `url(${ArrowCursor}), auto`
   
-// Dynamic Typing Animation of Title
+// Dynamic Typing Animation of Title Text
     const paragraphText = "Explore our curated selection of drinks!";
     const paraEl = document.getElementById('home_intro');
 
@@ -35,7 +35,7 @@ onMounted(async () => {
         }
     }
 
-    // Start the typing animation
+    // Starts the typing animation
     typeParagraph();
 })
 
@@ -120,7 +120,7 @@ function closeModal() {
   border-radius: 25px;
 }
 
-/* Tablet view: 768px–1024px */
+/* Tablet view styling */
 @media (min-width: 768px) and (max-width: 1024px) {
   #app {
     background-image: url('https://assets.24g.com/public/2022-frontend-test-project/bg_tablet.png');
@@ -146,7 +146,7 @@ function closeModal() {
   }
 }
 
-/* Mobile view: up to 767px */
+/* Mobile view styling */
 @media (max-width: 767px) {
   #app {
     background-image: url('https://assets.24g.com/public/2022-frontend-test-project/bg_mobile.png');

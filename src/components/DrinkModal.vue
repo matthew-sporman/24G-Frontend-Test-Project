@@ -1,5 +1,4 @@
 <template>
-  <!-- Overlay covers entire screen -->
   <div class="overlay" @click.self="$emit('close')">
     <div class="modal">
       <!-- Close button -->
