@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, onBeforeUnmount } from 'vue'
 import DrinkInfoCard from './components/DrinkInfoCard.vue'
 import DrinkModal from './components/DrinkModal.vue'
 
@@ -71,7 +71,6 @@ function closeModal() {
   background-repeat: no-repeat;
   text-align: center;
   padding: 2rem;
-  cursor: url(./arrowhead-rounded-outline.svg) 12 12, auto;
 }
 
 .the-24G-logo {
@@ -102,6 +101,62 @@ function closeModal() {
 .drink-card {
   border: 2.5px solid white;
   border-radius: 25px;
-  cursor: url(public/hover.svg) 12 12, auto;
+}
+
+/* Tablet view: 768px–1024px */
+@media (min-width: 768px) and (max-width: 1024px) {
+  #app {
+    background-image: url('https://assets.24g.com/public/2022-frontend-test-project/bg_tablet.png');
+    padding: 1.5rem;
+  }
+
+  .the-24G-logo {
+    height: 60px;
+    margin: 20px auto;
+  }
+
+  .welcome-message {
+    font-size: 50px;
+    margin: 20px;
+  }
+
+  .cards {
+    gap: 1rem;
+  }
+
+  .drink-card {
+    width: 200px;
+  }
+}
+
+/* Mobile view: up to 767px */
+@media (max-width: 767px) {
+  #app {
+    background-image: url('https://assets.24g.com/public/2022-frontend-test-project/bg_mobile.png');
+    padding: 1rem;
+  }
+
+  .the-24G-logo {
+    height: 50px;
+    margin: 15px auto;
+  }
+
+  .welcome-message {
+    font-size: 28px;
+    margin: 10px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .drink-card {
+    width: 90%;
+    max-width: 300px;
+    padding: 0.75rem;
+  }
 }
 </style>

@@ -4,7 +4,7 @@
     <div class="modal">
       <!-- Close button -->
       <button class="close" @click="$emit('close')">
-        <img src="./close.svg" alt="Close" width="24" height="24" />
+  <img :src="CloseIcon" alt="Close" width="24" height="24" />
       </button>
 
       <!-- Drink name -->
@@ -31,6 +31,7 @@
 </template>
 
 <script setup>
+import CloseIcon from '@/assets/close.svg'
 defineProps({
   drink: {
     type: Object,
@@ -77,13 +78,11 @@ defineEmits(['close'])
   font-size: 1.2rem;
   cursor: pointer;
   margin: 20px;
-  cursor: url(./hover.svg) 12 12, auto;
 }
 
 .close img {
   /* makes the close icon white */
   filter: invert(100%);
-  cursor: url(./hover.svg) 12 12, auto;
 }
 
 .drink-title {
@@ -124,5 +123,58 @@ ul {
   url("BrandonGrotesque-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .modal {
+    max-width: 500px;
+    padding: 1.5rem;
+    border-radius: 25px;
+  }
+
+  .drink-title {
+    font-size: 40px;
+  }
+
+  .drink-subtitle {
+    font-size: 1.3rem;
+  }
+
+  .drink-p-text {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .overlay {
+    align-items: flex-start; /* allows modal to scroll naturally */
+    padding: 1rem 0.5rem;
+  }
+
+  .modal {
+    width: 75%;
+    max-width: none;
+    max-height: 95vh;
+    margin: 1rem auto;
+    border-radius: 20px;
+    padding: 1.25rem;
+    overflow-y: auto;
+  }
+
+  .drink-title {
+    font-size: 28px;
+  }
+
+  .drink-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .drink-p-text {
+    font-size: 0.9rem;
+  }
+
+  ul {
+    padding-left: 1rem;
+  }
 }
 </style>
