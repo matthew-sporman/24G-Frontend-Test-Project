@@ -118,9 +118,10 @@ onUnmounted(() => {
 }
 
 .drink-p-text {
-  font-family: "Playwrite DE SAS", cursive;
-  font-optical-sizing: auto;
-  font-weight: 400;
+  font-family: "Brandon Grotesque";
+  src: url("BrandonGrotesque-Medium.woff2") format("woff2"),
+  url("BrandonGrotesque-Medium.woff") format("woff");
+  font-weight: 500;
   font-style: normal;
   color: white;
   font-size: 1rem;
