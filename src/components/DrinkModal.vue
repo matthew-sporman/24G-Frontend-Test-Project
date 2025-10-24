@@ -69,7 +69,7 @@ onUnmounted(() => {
   align-items: center;
   z-index: 1000;
   overflow-y: auto;
-  padding: 2rem;
+  padding: 32px;
 }
 
 .modal {
@@ -77,7 +77,7 @@ onUnmounted(() => {
   border-radius: 50px;
   max-width: 600px;
   width: 100%;
-  padding: 2rem;
+  padding: 32px;
   position: relative;
   box-shadow: 0 8px 40px rgba(0, 0, 0, 0.3);
 }
@@ -88,7 +88,7 @@ onUnmounted(() => {
   right: 12px;
   border: none;
   background: transparent;
-  font-size: 1.2rem;
+  font-size: 18px;
   margin: 20px;
   cursor: v-bind(hoverCursorUrl);
 }
@@ -108,8 +108,8 @@ onUnmounted(() => {
 }
 
 .drink-subtitle {
-  margin-top: 1.5rem;
-  font-size: 1.5rem;
+  margin-top: 24px;
+  font-size: 24px;
   font-family: "Playwrite DE SAS", cursive;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -124,13 +124,14 @@ onUnmounted(() => {
   font-weight: 500;
   font-style: normal;
   color: white;
-  font-size: 1rem;
-  margin-top: 0.5rem;
+  font-size: 16px;
+  margin-top: 8px;
 }
 
 ul {
-  padding-left: 1.5rem;
-  margin: 0.5rem 0 1rem 0;
+  list-style: none;
+  padding: 5px;
+  margin: 0 auto;
   color: white;
   font-family: "Brandon Grotesque";
   src: url("BrandonGrotesque-Medium.woff2") format("woff2"),
@@ -142,7 +143,7 @@ ul {
 @media (min-width: 768px) and (max-width: 1024px) {
   .modal {
     max-width: 500px;
-    padding: 1.5rem;
+    padding: 24px;
     border-radius: 25px;
   }
 
@@ -151,27 +152,27 @@ ul {
   }
 
   .drink-subtitle {
-    font-size: 1.3rem;
+    font-size: 21px;
   }
 
   .drink-p-text {
-    font-size: 0.95rem;
+    font-size: 16px;
   }
 }
 
 @media (max-width: 767px) {
   .overlay {
     align-items: flex-start;
-    padding: 1rem 0.5rem;
+    padding: 16px 8px;
   }
 
   .modal {
     width: 75%;
     max-width: none;
     max-height: 95vh;
-    margin: 1rem auto;
+    margin: 16px auto;
     border-radius: 20px;
-    padding: 1.25rem;
+    padding: 24px;
     overflow-y: auto;
   }
 
@@ -180,15 +181,15 @@ ul {
   }
 
   .drink-subtitle {
-    font-size: 1.1rem;
+    font-size: 18px;
   }
 
   .drink-p-text {
-    font-size: 0.9rem;
+    font-size: 14px;
   }
 
   ul {
-    padding-left: 1rem;
+    padding-left: 16px;
   }
 }
 </style>

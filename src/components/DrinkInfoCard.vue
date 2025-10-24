@@ -39,7 +39,7 @@ const hoverCursorUrl = `url(${HoverCursor}), auto`
   border: 2px solid #353E43;
   border-radius: 25px;
   background-color: rgba(0,0,0,0.3);
-  padding: 0.5rem;
+  padding: 12px;
 }
 
 .drink-card:hover {
@@ -53,14 +53,14 @@ const hoverCursorUrl = `url(${HoverCursor}), auto`
   object-fit: cover;
   border-radius: 8px;
   display: block;
-  margin-bottom: 0.5rem;
+  margin-bottom: 12px;
 }
 
 .drink-name {
   font-family: 'Brandon Grotesque', sans-serif;
   font-weight: 500;
-  font-size: 1rem;
-  color: #fff;
+  font-size: 16px;
+  color: white;
   margin: 0;
 }
 </style>

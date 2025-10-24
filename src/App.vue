@@ -87,7 +87,9 @@ function closeModal() {
   background-position: center;
   background-repeat: no-repeat;
   text-align: center;
-  padding: 2rem;
+  padding: 24px;
+  min-height: 100vh;
+  background-attachment: fixed;
 }
 
 .the-24G-logo {
@@ -112,7 +114,10 @@ function closeModal() {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1.5rem;
+  gap: 24px;
+  margin: 0 auto;
+  max-width: 1040px;
+
 }
 
 .drink-card {
@@ -124,7 +129,7 @@ function closeModal() {
 @media (min-width: 768px) and (max-width: 1024px) {
   #app {
     background-image: url('https://assets.24g.com/public/2022-frontend-test-project/bg_tablet.png');
-    padding: 1.5rem;
+    padding: 24px;
   }
 
   .the-24G-logo {
@@ -138,7 +143,7 @@ function closeModal() {
   }
 
   .cards {
-    gap: 1rem;
+    gap: 16px;
   }
 
   .drink-card {
@@ -150,7 +155,7 @@ function closeModal() {
 @media (max-width: 767px) {
   #app {
     background-image: url('https://assets.24g.com/public/2022-frontend-test-project/bg_mobile.png');
-    padding: 1rem;
+    padding: 16px;
   }
 
   .the-24G-logo {
@@ -167,13 +172,13 @@ function closeModal() {
   .cards {
     flex-direction: column;
     align-items: center;
-    gap: 0.75rem;
+    gap: 12px;
   }
 
   .drink-card {
     width: 90%;
     max-width: 300px;
-    padding: 0.75rem;
+    padding: 12px;
   }
 }
 </style>
