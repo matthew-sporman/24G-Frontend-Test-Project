@@ -7,7 +7,7 @@ Hours spent: 5 hours
 
 Hyper-link: https://drink-menu-24g.onrender.com
 
-The above is hosted on render. Similar tool to Kubernetes but much simpler and better for this use-case as a result.
+This project is hosted on Render, a modern PaaS chosen for it's simplicity.
 
 # OPTIONAL RESPONSES
 Problem 1:
