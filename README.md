@@ -11,13 +11,11 @@ This project is hosted on Render, a modern PaaS chosen for it's simplicity.
 
 # OPTIONAL RESPONSES
 Problem 1:
-
-<img :src="hovered ? drink.images.back : drink.images.front" />
-
+--> img :src="hovered ? drink.images.back : drink.images.front" <--
 The above is a line of code I had in my DrinkInfoCard.vue file.
 
 Vue evaluates drink.images.back immediately when rendering the component...
-If drink.images is undefined -> for example, the fetch hasn’t completed yet or the JSON hasn’t loaded, it
+If drink.images is undefined, the fetch hasn’t completed yet, or the JSON hasn’t loaded, it
 throws a runtime error.
 
 I learned that I need to instead do this:
@@ -28,10 +26,9 @@ This allows JS to not just immediately error out i.e. the ?. operator tells Java
 
 So instead of crashing, the img tag’s src becomes undefined.
 
-This is something I got stuck on for a hot minute (20 minutes) and was the source of why nothing was appearing
-beneath my welcome message. Vue is a relatively new thing for me, but I wanted to make use of it now, as you 
-mentioned it being your primary framework, so no better time than the present to get familiarized with it. I have
-only used it once before, but it was a very small scale media player I was just fooling around with.
+This is something I got stuck on, and was the source of why nothing was appearing
+beneath my welcome message. Vue is a relatively new thing for me and I wanted to make use of it now, as 24G 
+mentioned it being their primary framework. I have only used it once before, but it was a very small scale media player I was just fooling around with.
 
 Problem 2:
 I ran into an issue when trying to use Google’s Material You close icon for the drink info cards.
@@ -54,6 +51,6 @@ Vue.js is really cool and I am glad that I picked this up now it is a good frame
 using just straight vanilla JavaScript. I didn't realize how nice a framework could be.
 
 Another huge thing I got from this, is I now fully understand what Vite is and how amazing it is
-that you can npm run dev and dynamically see changes. This is so incredibly useful and way better then
-the vanilla set-up I was using before. I don't think I will really go back to vanilla JS methods of coding after
-using Vue. I want to try others going forwards, but better stick to Vue for now and learn one thing at a time!
+that you can npm run dev and dynamically see changes. I understand that strong vanilla JS skills are the essential
+foundation for mastering any framework, and I'm eager to continue building on this by diving deeper into Vue. My goal
+is to master one framework well before exploring others!
